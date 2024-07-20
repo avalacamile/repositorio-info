@@ -1,29 +1,26 @@
-class Cliente:
-    def __init__(self, nome, sobrenome, cpf, renda):
-     self.__nome = nome
-     self.__sobrenome = sobrenome
-     self.__cpf = cpf
-     self.__renda= renda
+class Teste:
+     def __init__(self, nome, idade, cpf, familia):
+      self.nome = nome
+      self.idade = idade
+      self.__familia = familia
+      self.__cpf = cpf
 
-    def nome_completo(self):
-        return f'{self.__nome} {self.__sobrenome}'
-     
-    
-class Funcionario:
-    def __init__(self, nome, sobrenome, cpf, matricula):
-     self.__nome = nome
-     self.__sobrenome = sobrenome
-     self.__cpf = cpf
-     self.__matricula = matricula
+     def correr(self):
+       print('Estou correndo')   
 
-    def nome_completo(self):
-        return f'{self.__nome} {self.__sobrenome}'
+     def beber(self, bebida):
+        if bebida == 'cerveja':
+           self.__apresentar_documento()
+        print('bebendo...')
+
+     def __apresentar_documento(self):
+        print(self.__cpf)
+
+pessoa = Teste('Ana',32,'145.098.647-32','Souza')
+pessoa.beber ('cerveja')
+pessoa.beber ('coca-cola')
    
-    
-cliente1 = Cliente('Ana', 'Eloisa','123.123.123.12', 10.000)
-funcionario1 = Funcionario('Maria', 'das Dores','432.789.098.12', 18976)
-print(cliente1.nome_completo())
-print(funcionario1.nome_completo())
+
     
 
 
